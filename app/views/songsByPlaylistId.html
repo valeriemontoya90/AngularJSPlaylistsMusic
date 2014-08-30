@@ -1,12 +1,12 @@
 <form>
     <h2>Ajouter un son</h2>
-    <input ng-model="song.name" type="text"/>
+    <input ng-model="song.title" type="text"/>
     <button ng-click="addSong()">Valider</button>
 </form>
 
 <h2>Liste des sons: {{songs.length}}</h2>
     <ul>
         <li ng-repeat="s in songs" ng-class-even="'even'" ng-class-odd="'odd'">
-            {{$index+":"+s.name}}
+            {{$index+":"+s.title}}
         </li>
     </ul>

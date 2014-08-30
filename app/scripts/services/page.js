@@ -2,8 +2,8 @@
 
 angular.module('playlistAngularApp')
   .value('Page', {
-        title:"Valérie",
+        title:'Valérie',
         getTitle:function(){
             return this.title;
         }
-    });
+});

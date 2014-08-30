@@ -1,36 +1,33 @@
 'use strict';
 
 angular.module('playlistAngularApp')
-<<<<<<< HEAD
-  .service('Song', function Song($log) {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-    
+    .service('Song', function Song($log) {
+    /*
     var oneSong = {
-        id:"",
-        name:""
-    }
+        id:'',
+        title:''
+    };*/
         
     var songs = [];
 
     // Public API here
     return {
         getSongs: function () {
-            $log.warn("JE SUIS DANS getSongs");
+            $log.warn('JE SUIS DANS getSongs');
             return songs;
         },
         addSong: function (oneSong) {
-            $log.warn("JE SUIS DANS addSong");
+            $log.warn('JE SUIS DANS addSong');
             songs.push(oneSong);
             $log.warn(oneSong);
         },
         getPlaylists: function () {
-            return playlists;
+            return songs;
         },
-        addPlaylist: function (playlist) {
-            $log.warn(playlist);
-            playlists.push(playlist);
-            $log.warn(playlists[0]);
+        addPlaylist: function (oneSong) {
+            $log.warn(oneSong);
+            songs.push(oneSong);
+            $log.warn(songs[0]);
         }
     };
-
   });

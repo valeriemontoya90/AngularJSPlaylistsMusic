@@ -12,4 +12,4 @@ angular.module('playlistAngularApp')
     Playlist.loadPlaylists().success(function(){
         $scope.playlists = Playlist.getPlaylists();
     });
-  })
+  });

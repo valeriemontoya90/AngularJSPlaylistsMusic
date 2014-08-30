@@ -7,5 +7,5 @@ angular.module('playlistAngularApp')
       'AngularJS',
       'Karma'
     ];
-    $scope.titlename="Valerie";
+    $scope.titlename='Valerie';
   });

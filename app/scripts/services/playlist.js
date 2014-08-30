@@ -5,27 +5,18 @@ angular.module('playlistAngularApp')
     // Service logic
         // ...
         var onePlaylist = {
-            id:"",
-            title:""
+            id:'',
+            title:''
         }
         
         var playlists = [];
         
-
-        // Public API here
         return {
             loadPlaylists: function(){
-                return $http.get("https://api.deezer.com/user/2529/playlists").
-                    success(function(data, status) {
-                        //$scope.status = status;
-                        //$scope.data = data;
-                        playlists=data;
-                    }).
-                    error(function(data, status) {
-                        //$scope.data = data || "Request failed";
-                       // $scope.status = status;
-                       playlists=[];
-                    });
+                return $http.get('https://api.deezer.com/user/2529/playlists')
+                    .success(function(data, status) {
+                        playlists=data.data;
+                });
             },
             getPlaylists: function () {
                 return playlists;
